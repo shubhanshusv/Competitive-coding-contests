@@ -85,27 +85,81 @@ int main() {
             track[count] = temp;
             count++;
 
-
          }
 
          for(i=0;i<count;i++){
 
             cout << track[i] << " ";
 
+         }
+
+         j = 0;
+
+         if(count == 1){
+
+            if(track[0] > 0){
+
+               cout << track[0];
+
+            }else{
+
+               cout << m;
+
+            }
+
+         }else if(count == 3){
+
+            if(track[0] > 0){
+
+               cout << min(abs(track[1]),m);
+
+            }else{
+
+               cout << min(abs(track[0]+track[2]),m) + track[1];
+
+            }
+
+         }else{
+
+            largest = 0;
+            if(track[0] > 0){
+
+               start = 0;
+
+            }else{
+
+               start = 1;
+
+            }
+
+            mover = start;
+            m_temp = m;
+            temp = 0;
+
+            while(m_temp > 0){
+
+               temp += track[mover];
+
+               if(mover >= count){
+
+                  if(){
+
+
+
+                  }
+
+               }
+
+               x =  min(abs(track[mover+1]),m_temp);
+               temp += x;
+               m_temp -= x;
+               mover += 2;
+
+            }
 
          }
 
-
-
-
-
-
-
       }
-
-
-
-
 
    }
 
